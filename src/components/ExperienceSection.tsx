@@ -5,13 +5,15 @@ const experiences = [
     role: "Frontend Developer",
     company: "Flooid (Keuro Digital)",
     period: "Feb 2024 – Present",
+    project: "Riyaah",
     description:
       "Developed and maintained Riyaah, a multi-language (English & Arabic) e-commerce platform using Next.js and Tailwind CSS. Implemented Algolia-powered search for fast and accurate product discovery, optimized for high-traffic users. Collaborated with design and backend teams to deliver scalable, SEO-friendly, and performance-optimized features.",
   },
   {
     role: "Frontend Developer",
-    company: "Flooid (OMS)",
+    company: "Flooid (Keuro Digital)",
     period: "Feb 2024 – Present",
+    project: "OMS (Order Management System)",
     description:
       "Built a comprehensive admin dashboard for managing orders, products, inventory, and promotional banners. Designed reusable React components to streamline backend workflows for the Riyaah e-commerce platform. Improved operational efficiency by delivering a user-friendly and responsive admin interface.",
   },
@@ -47,6 +49,7 @@ const ExperienceSection = () => (
               {exp.period}
             </h4>
             <h3 className="font-bold text-lg md:text-xl">{exp.company}</h3>
+            <h5 className="font-bold text-lg md:text-xl">{exp.project}</h5>
           </div>
 
           <div className="mt-2 md:mt-0">
