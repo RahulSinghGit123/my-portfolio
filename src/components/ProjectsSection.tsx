@@ -19,8 +19,10 @@ const projects = [
       "Google Analytics"
     ],
     githubUrl:
-      "https://github.com/VARA4u-tech/safe-trip-smart-driving-safety-application",
-    liveUrl: "https://safe-trip-smart-driving-safety-appl.vercel.app",
+      "",
+    liveUrl: "https://riyaah.sa/en",
+    git: false,
+    demo: true,
   },
   {
     title: "OMS (Order Management System)",
@@ -36,6 +38,8 @@ const projects = [
     ],
     githubUrl: "https://github.com/VARA4u-tech/AOTMS",
     liveUrl: "https://aotms.in",
+    git: false,
+    demo: false,
   },
   {
     title: "Parmarth Trust Website",
@@ -50,6 +54,8 @@ const projects = [
     githubUrl:
       "",
     liveUrl: "https://theparmarthtrust.org/",
+    git: false,
+    demo: true,
   },
   {
     title: "An Institute Website",
@@ -64,20 +70,14 @@ const projects = [
     ],
     githubUrl: "https://github.com/VARA4u-tech/EduPredict",
     liveUrl: "https://edu-pridect.vercel.app/",
-  },
-  {
-    title: "Train Tracking Website",
-    description:
-      "Built dynamic route visualization with real-time schedule and platform updates, along with a unified search system for both reserved and unreserved tickets. Leveraged Railway for backend infrastructure and database management, while deploying the frontend on Vercel with Edge optimization for high performance and low-latency delivery.",
-    tags: ["Flutter", "Riverpod", "Firebase", "Hive", "Dart"],
-    githubUrl: "https://github.com/VARA4u-tech/my-first-flutter-app",
-    liveUrl: "https://github.com/VARA4u-tech/my-first-flutter-app",
+    git: false,
+    demo: true,
   },
 ];
 
 const ProjectsSection = () => (
   <SectionBlock id="projects" title="Projects">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full">
       {projects.map((project) => (
         <div
           key={project.title}
@@ -89,7 +89,7 @@ const ProjectsSection = () => (
             </div>
           )}
           <div>
-            <h3 className="text-xl font-black text-foreground group-hover:underline decoration-4 underline-offset-4">
+            <h3 className="text-xl font-black opacity-60 text-foreground group-hover:underline decoration-4 underline-offset-4">
               {project.title}
             </h3>
             <p className="body-text mt-4 text-sm font-normal">
@@ -110,22 +110,34 @@ const ProjectsSection = () => (
 
           <div className="flex flex-col sm:flex-row gap-3 mt-8 pt-6 border-t border-black/10">
             <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 py-2 border-2 border-black bg-white text-[10px] font-black uppercase tracking-wider transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-black hover:text-white"
+              href={project.git ? project.githubUrl : undefined}
+              target={project.git ? "_blank" : undefined}
+              rel={project.git ? "noopener noreferrer" : undefined}
+              className={`flex items-center justify-center gap-2 px-4 py-2 border-2 border-black bg-white text-[10px] font-black uppercase tracking-wider transition-all duration-300 ${project.git
+                ? "shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-black hover:text-white"
+                : "opacity-50 cursor-not-allowed"
+                }`}
+              onClick={(e) => {
+                if (!project.git) e.preventDefault();
+              }}
             >
               <Github className="w-3.5 h-3.5" />
-              Source
+              {project.git ? "Source" : "Private"}
             </a>
             <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 py-2 border-2 border-black bg-white text-[10px] font-black uppercase tracking-wider transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-black hover:text-white"
+              href={project.demo ? project.liveUrl : undefined}
+              target={project.demo ? "_blank" : undefined}
+              rel={project.demo ? "noopener noreferrer" : undefined}
+              className={`flex items-center justify-center gap-2 px-4 py-2 border-2 border-black bg-white text-[10px] font-black uppercase tracking-wider transition-all duration-300 ${project.demo
+                ? "shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-black hover:text-white"
+                : "opacity-50 cursor-not-allowed"
+                }`}
+              onClick={(e) => {
+                if (!project.demo) e.preventDefault();
+              }}
             >
               <ExternalLink className="w-3.5 h-3.5" />
-              Live Demo
+              {project.demo ? "Demo" : "Private"}
             </a>
           </div>
         </div>

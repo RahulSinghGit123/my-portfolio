@@ -77,29 +77,6 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-
-          <div>
-            <p className="text-xs uppercase tracking-widest text-foreground/50 mb-4">
-              Connect
-            </p>
-            <div className="flex gap-4">
-              {[
-                { Icon: Github, href: "https://github.com/VARA4u-tech" },
-                { Icon: Linkedin, href: "https://linkedin.com/in/vara4u" },
-                { Icon: InstagramIcon, href: "https://instagram.com/d_v_p6" },
-              ].map(({ Icon, href }, i) => (
-                <a
-                  key={i}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 border border-foreground/20 hover:bg-black hover:text-white transition-all duration-300 hover:-translate-y-1"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Right Column: Form */}
