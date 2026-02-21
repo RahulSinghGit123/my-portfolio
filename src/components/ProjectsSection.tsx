@@ -5,24 +5,25 @@ import { Badge } from "./ui/badge";
 
 const projects = [
   {
-    title: "SafeTrip Pro",
+    title: "Riyaah E-Commerce Website",
     isNew: true,
     description:
-      "A premium, AI-powered navigation and safety companion featuring real-time intelligence, drowsiness detection, SOS guardian network, and predictive analytics for a safer driving experience.",
+      "Features a lightning-fast search powered by Algolia. Offers seamless support for both English and Arabic languages. Provides an excellent user experience(UX) tailored for high - volume shopping.Features Rima AI to deliver tailored product recommendations.",
     tags: [
-      "React",
-      "TypeScript",
+      "Nextjs",
+      "Reactjs",
       "Tailwind",
-      "Supabase",
-      "Framer Motion",
-      "Vite",
+      "Algolia",
+      "React Query",
+      "CleverTap",
+      "Google Analytics"
     ],
     githubUrl:
       "https://github.com/VARA4u-tech/safe-trip-smart-driving-safety-application",
     liveUrl: "https://safe-trip-smart-driving-safety-appl.vercel.app",
   },
   {
-    title: "Academy of Tech Masters (AOTMS)",
+    title: "OMS (Order Management System)",
     description:
       "A premier tech education platform featuring AI-powered assistance, interactive student dashboards, and comprehensive course management. Delivered as a high-performance freelance project for a real-world client.",
     tags: [
@@ -37,33 +38,37 @@ const projects = [
     liveUrl: "https://aotms.in",
   },
   {
-    title: "Elara Cosmetics",
+    title: "Parmarth Trust Website",
     description:
-      "A luxury Ayurvedic e-commerce platform with a focus on premium user experience. Features category-based filtering, shopping cart, wishlist, and a custom WhatsApp-integrated checkout system.",
-    tags: ["React", "TypeScript", "Tailwind", "Vite", "Shadcn UI", "Vitest"],
+      "The Parmarth Trust website serves as a digital platform for a Bihar-based NGO, featuring a multi-functional registration system, a secure donation portal, a simple galary and a dynamic success story showcase. The interface prioritizes accessible UI/UX specialy.",
+    tags: [
+      "Nextjs",
+      "Reactjs",
+      "Tailwind",
+      "TailwindUi"
+    ],
     githubUrl:
-      "https://github.com/VARA4u-tech/Elara-Cosmetics-E--Commerce-Website-",
-    liveUrl: "https://elara-cosmetics.vercel.app/",
+      "",
+    liveUrl: "https://theparmarthtrust.org/",
   },
   {
-    title: "EduPredict",
+    title: "An Institute Website",
     description:
-      "An AI-powered predictive analytics system for student success, featuring a unique comic book-inspired UI, interactive dashboards, and real-time at-risk student alerts.",
+      "In Ronex Study, I developed an Automated Certificate Verification system for student credentials, a dynamic Course Catalog for safety diplomas, and a Placement Showcase highlighting 145+ successful career transitions ronexstudy.com.",
     tags: [
-      "React",
-      "TypeScript",
+      "Nextjs",
+      "Reactjs",
       "Tailwind",
-      "Vite",
-      "Lucide React",
-      "Framer Motion",
+      "TailwindUi",
+      "Yarn"
     ],
     githubUrl: "https://github.com/VARA4u-tech/EduPredict",
     liveUrl: "https://edu-pridect.vercel.app/",
   },
   {
-    title: "SmartQuack",
+    title: "Train Tracking Website",
     description:
-      "A delightful, offline-first task manager with a gamified twist! Features a reactive duck mascot that changes moods based on your productivity progress.",
+      "Built dynamic route visualization with real-time schedule and platform updates, along with a unified search system for both reserved and unreserved tickets. Leveraged Railway for backend infrastructure and database management, while deploying the frontend on Vercel with Edge optimization for high performance and low-latency delivery.",
     tags: ["Flutter", "Riverpod", "Firebase", "Hive", "Dart"],
     githubUrl: "https://github.com/VARA4u-tech/my-first-flutter-app",
     liveUrl: "https://github.com/VARA4u-tech/my-first-flutter-app",

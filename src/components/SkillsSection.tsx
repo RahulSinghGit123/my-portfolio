@@ -55,7 +55,7 @@ const SkillsSection = () => (
         </div>
       ))}
     </div>
-
+    {/* 
     <div className="w-full pt-12 border-t border-black/5">
       <div className="flex flex-col gap-6">
         <div className="flex items-center justify-between">
@@ -66,7 +66,7 @@ const SkillsSection = () => (
         </div>
         <GithubGraph />
       </div>
-    </div>
+    </div> */}
   </SectionBlock>
 );
 
