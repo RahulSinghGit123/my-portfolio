@@ -119,7 +119,7 @@ const HeroSection = () => {
         <p className="font-mono text-xs text-foreground/60 leading-relaxed font-medium">
           // portfolio.tsx
           <br />
-          // version: 3.0.0
+          // version: 1.0.0
           <br />
           // status: production
           <br />
@@ -201,36 +201,37 @@ const HeroSection = () => {
         <div className="flex gap-4 justify-center mt-10">
           {[
             {
-              Icon: Github,
-              href: "https://github.com/VARA4u-tech",
-              label: "GitHub",
-            },
-            {
               Icon: Linkedin,
               href: "https://www.linkedin.com/in/durga-vara-prasad-pappuri-1797701b6/",
               label: "LinkedIn",
+              status: "Available"
             },
             {
               Icon: InstagramIcon,
               href: "https://www.instagram.com/d_v_p6/",
               label: "Instagram",
+              status: "Not Available"
             },
             {
               Icon: Mail,
               href: "mailto:rahulsinghgiit@gmail.com",
               label: "Email",
+              status: "Available"
             },
-          ].map(({ Icon, href, label }, i) => (
-            <a
-              key={i}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="group relative inline-flex items-center justify-center p-3 border-2 border-black bg-white text-black transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] hover:bg-black hover:text-white"
-            >
-              <Icon className="w-5 h-5" />
-            </a>
+          ].map(({ Icon, href, label, status }, i) => (
+            <div className="flex flex-col items-center gap-2">
+              <a
+                key={i}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="group relative inline-flex items-center justify-center p-3 border-2 border-black bg-white text-black transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] hover:bg-black hover:text-white"
+              >
+                <Icon className="w-5 h-5" />
+              </a>
+              <span className="text-[10px] text-foreground/70">{status}</span>
+            </div>
           ))}
         </div>
 
@@ -247,25 +248,18 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bottom-left info */}
-      <div className="absolute bottom-10 left-6 md:left-10 z-10">
-        <span className="text-foreground/80 text-xs tracking-[0.2em] uppercase font-mono font-medium">
-          www.prasad.dev
-        </span>
-      </div>
-
       {/* Bottom-right stats */}
       <div className="absolute bottom-10 right-6 md:right-10 z-10 hidden md:block">
         <div className="font-mono text-xs text-foreground/80 text-right leading-relaxed font-medium">
           <p>const experience = "2+ years";</p>
-          <p>const projects = 10;</p>
+          <p>const projects = 5;</p>
           <p>const passion = Infinity;</p>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
-        <ChevronDown className="w-5 h-5 text-foreground/30 animate-bounce" />
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10">
+        <ChevronDown className="w-10 h-10 text-foreground/30 animate-bounce" />
       </div>
     </section>
   );
