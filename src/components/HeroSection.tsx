@@ -202,7 +202,7 @@ const HeroSection = () => {
           {[
             {
               Icon: Linkedin,
-              href: "https://www.linkedin.com/in/durga-vara-prasad-pappuri-1797701b6/",
+              href: "https://www.linkedin.com/in/rahul-singh-ui/",
               label: "LinkedIn",
               status: "Available"
             },
